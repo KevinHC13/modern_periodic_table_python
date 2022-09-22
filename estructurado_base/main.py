@@ -33,10 +33,29 @@ def add():
     number=input("Atomic Number: ")
     weight=input("Atomic weight: ")
     comments= input("Comment: ")
-    data = open("data.txt","a")
-    data.write(read_last_item()+","+name+","+symbol+","+number+","+weight+","+comments+"\n")
-    data.close    
-    print("Data saved")
+    arElements=separate_items()
+    flag_exists=False
+    for i in range(0,len(arElements)):
+        for j in range(1,4):
+            if j == 1:
+                if arElements[i][j]==name:
+                    flag_exists=True
+            elif(j==2):
+                if arElements[i][j]==symbol:
+                    flag_exists=True
+            elif(j==3):
+                if arElements[i][j]==number:
+                    flag_exists=True
+            elif(j==4):
+                if arElements[i][j]==weight:
+                    flag_exists=True
+    if flag_exists != True:    
+        data = open("data.txt","a")
+        data.write(read_last_item()+","+name+","+symbol+","+number+","+weight+","+comments+"\n")
+        data.close    
+        print("Data saved")
+    else:
+        print("Data exist")
 
 def menu_exp():
     first=False
@@ -88,12 +107,8 @@ def explore():
         print("Data not found")
     else:
         print("Invalid option")
-        #pause()
         exit
 
-    
-            
-            
 first=False
 counter=0
 op=menu()
@@ -105,7 +120,7 @@ while(op != 3 or first==False):
         pause()
     elif(op==2):
         explore()
-        
+
         pause()
     elif(op==3):
         print("Exiting...")

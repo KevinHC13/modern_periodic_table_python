@@ -3,3 +3,4 @@
 2,helio,he,89.9,12.2,helio
 3,helio,he,1.2,12,asd
 4,,,,,
+5,Fluor,Fu,12,12.432,Elemento que se agrega a la pasata de dientes
