@@ -26,13 +26,7 @@ def read_last_item():
     data.close
     return str(len(arData))
 
-def add():
-    banner()
-    name=input("Name: ")
-    symbol=input("Symbol: ")
-    number=input("Atomic Number: ")
-    weight=input("Atomic weight: ")
-    comments= input("Comment: ")
+def data_exist(name,symbol,number,weight):
     arElements=separate_items()
     flag_exists=False
     for i in range(0,len(arElements)):
@@ -49,7 +43,17 @@ def add():
             elif(j==4):
                 if arElements[i][j]==weight:
                     flag_exists=True
-    if flag_exists != True:    
+    return flag_exists
+
+def add():
+    banner()
+    name=input("Name: ")
+    symbol=input("Symbol: ")
+    number=input("Atomic Number: ")
+    weight=input("Atomic weight: ")
+    comments= input("Comment: ")
+    
+    if data_exist(name,symbol,number,weight) != True:    
         data = open("data.txt","a")
         data.write(read_last_item()+","+name+","+symbol+","+number+","+weight+","+comments+"\n")
         data.close    

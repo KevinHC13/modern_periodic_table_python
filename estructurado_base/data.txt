@@ -4,3 +4,4 @@
 3,helio,he,1.2,12,asd
 4,,,,,
 5,Fluor,Fu,12,12.432,Elemento que se agrega a la pasata de dientes
+6,Herro,Fe,32,43.2341,Comentario de hierro
