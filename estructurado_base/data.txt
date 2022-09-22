@@ -1,0 +1,5 @@
+0,Hidrogeno,H,1,1.008,El elmento mas ligero
+1,Helio,He,2,2.843,El segundo elemento en la tabla periodica
+2,helio,he,89.9,12.2,helio
+3,helio,he,1.2,12,asd
+4,,,,,
