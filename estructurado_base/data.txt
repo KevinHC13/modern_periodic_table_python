@@ -5,3 +5,9 @@
 4,,,,,
 5,Fluor,Fu,12,12.432,Elemento que se agrega a la pasata de dientes
 6,Herro,Fe,32,43.2341,Comentario de hierro
+7,Zinc,Zr,40,42.41,Liam
+8,Harry,Hr,28,dea,Hrry
+9,Empty,Empty,Empty,Empty,Empty
+10,,,,,
+11,,Cb,,3.412,asdfa
+12,,Be,83,,agasd

@@ -12,13 +12,18 @@ def banner():
     print("Digital")
     print("________\n")
 
+def inputs_Select():
+    inputOp=input(":") or "0"
+    if not(inputOp =="1" or  inputOp=="2" or inputOp=="3" or inputOp=="4"):
+        inputOp="0"
+    return int(inputOp) 
 def menu():
     banner()    
     print("Enter the corresponding no")
     print("1.Add new Element Information")
     print("2.Explore")
     print("3.Quit")
-    return int(input(":") or 0)
+    return inputs_Select()
 
 def read_last_item():
     data = open("data.txt","r")
@@ -32,34 +37,39 @@ def data_exist(name,symbol,number,weight):
     for i in range(0,len(arElements)):
         for j in range(1,4):
             if j == 1:
-                if arElements[i][j]==name:
-                    flag_exists=True
+                if name!="":
+                    if arElements[i][j]==name:
+                        flag_exists=True
             elif(j==2):
-                if arElements[i][j]==symbol:
-                    flag_exists=True
+                if symbol!="":
+                    if arElements[i][j]==symbol:
+                        flag_exists=True
             elif(j==3):
-                if arElements[i][j]==number:
-                    flag_exists=True
+                if number!="":
+                    if arElements[i][j]==number:
+                        flag_exists=True
             elif(j==4):
-                if arElements[i][j]==weight:
-                    flag_exists=True
+                if weight!="":
+                    if arElements[i][j]==weight:
+                        flag_exists=True
     return flag_exists
 
 def add():
     banner()
     name=input("Name: ")
-    symbol=input("Symbol: ")
+    symbol=input("Symbol: ") 
     number=input("Atomic Number: ")
-    weight=input("Atomic weight: ")
+    weight=input("Atomic weight: ") 
     comments= input("Comment: ")
-    
+    #if name!="" or symbol!="" or number!="" or weight!="":
     if data_exist(name,symbol,number,weight) != True:    
         data = open("data.txt","a")
         data.write(read_last_item()+","+name+","+symbol+","+number+","+weight+","+comments+"\n")
         data.close    
         print("Data saved")
     else:
-        print("Data exist")
+            print("Data exist")
+
 
 def menu_exp():
     first=False
@@ -70,7 +80,7 @@ def menu_exp():
     print("2.Serch by 'SYMBOL'")
     print("3.Serch by 'ATOMIC NUMBER'")
     print("4.Serch by 'ATOMIC WRIGHT'")
-    op=int(input(":") or 0)
+    op = inputs_Select()
     if op==0:
         op = menu_exp()
     return op
@@ -101,11 +111,26 @@ def explore():
         for i in range(0,len(arElements)):
             if arElements[i][op] == InputData:
                 banner()
-                print("Name:"+str(arElements[i][1]))
-                print("Symbol:"+str(arElements[i][2]))
-                print("Atomic No:"+str(arElements[i][3]))
-                print("Atomic Wt:"+str(arElements[i][4]))
-                print("Comment:"+str(arElements[i][5]))
+                if arElements[i][1]!="":
+                    print("Name:"+str(arElements[i][1]))
+                else:
+                    print("Name: Empty")
+                if arElements[i][2]!="":
+                    print("Symbol:"+str(arElements[i][2]))
+                else:
+                    print("Symbol: Empty")
+                if arElements[i][3]!="":
+                    print("Atomic No:"+str(arElements[i][3]))
+                else:
+                    print("Atimic No: Empty")
+                if arElements[i][4]!="":
+                    print("Atomic Wt:"+str(arElements[i][4]))
+                else:
+                    print("Atomic Wt: Empty")
+                if arElements[i][5] != "":
+                    print("Comment:"+str(arElements[i][5]))
+                else:
+                    print("Comment: Empty")
                 return
         banner()
         print("Data not found")
