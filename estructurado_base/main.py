@@ -139,7 +139,6 @@ def explore():
         exit
 
 first=False
-counter=0
 op=menu()
 while(op != 3 or first==False):
     first=True

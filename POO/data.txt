@@ -1,0 +1,1 @@
+0,Hidrogeno,H,1,1.008,El primer elemento de la tabla
