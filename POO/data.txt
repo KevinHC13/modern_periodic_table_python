@@ -1,1 +1,7 @@
 0,Hidrogeno,H,1,1.008,El primer elemento de la tabla
+1,Helio,He,2,3.2321,El segundo elemento de la tabla
+2,Hierro,Fe,23,32.2323,Elemento metalico
+3,Mercurio,Mg,18,22.3232,Metal liquido en temperatura ambiente
+4,Cobre,Cu,32,44.2313,Buen conductor 
+5,Manganeso,Mn,33,48.321,Genera cristales al ser destilado
+6,Carbono,C,12,13.0932,De alta consentracion en el ambiente en estado biatomico
