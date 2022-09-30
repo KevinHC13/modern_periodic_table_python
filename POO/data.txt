@@ -5,3 +5,5 @@
 4,Cobre,Cu,32,44.2313,Buen conductor 
 5,Manganeso,Mn,33,48.321,Genera cristales al ser destilado
 6,Carbono,C,12,13.0932,De alta consentracion en el ambiente en estado biatomico
+7,Fluor,F,9,18.998,Añadido a las pastas de dientes
+8,Potasio,K,19,39.098,Metal alcalino de color blanco
